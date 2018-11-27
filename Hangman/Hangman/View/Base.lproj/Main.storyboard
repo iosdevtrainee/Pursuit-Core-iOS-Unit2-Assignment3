@@ -46,14 +46,13 @@
         <!--Game View Controller-->
         <scene sceneID="cAb-B1-RUU">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yha-6U-eZL" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="thV-M2-HMR" customClass="GameViewController" customModule="Hangman" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zTx-a5-iLn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTY-fk-lV8">
-                                <rect key="frame" x="0.0" y="161" width="375" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTY-fk-lV8">
+                                <rect key="frame" x="0.0" y="161" width="375" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -71,33 +70,60 @@
                                     <action selector="startNewGame:" destination="thV-M2-HMR" eventType="touchUpInside" id="mA3-Gi-vo1"/>
                                 </connections>
                             </button>
-                            <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="text" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DPI-eH-xaK">
+                            <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter A Secret Word!" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DPI-eH-xaK">
                                 <rect key="frame" x="122" y="108" width="131" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="text" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hKm-nF-4Mc">
-                                <rect key="frame" x="122" y="221" width="131" height="30"/>
+                            <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Guess a Letter!" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hKm-nF-4Mc">
+                                <rect key="frame" x="122" y="200" width="131" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VdX-nK-dYc">
+                                <rect key="frame" x="322" y="72" width="45" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turns Left:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ADB-mg-4cL">
+                                <rect key="frame" x="231" y="72" width="89" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73L-Qg-ipk">
+                                <rect key="frame" x="122" y="152" width="131" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="DPI-eH-xaK" firstAttribute="top" secondItem="jIZ-Sc-j0F" secondAttribute="top" constant="44" id="0dV-mM-hUI"/>
                             <constraint firstItem="DPI-eH-xaK" firstAttribute="leading" secondItem="jIZ-Sc-j0F" secondAttribute="leading" constant="122" id="2m4-gT-f4z"/>
+                            <constraint firstItem="VdX-nK-dYc" firstAttribute="leading" secondItem="ADB-mg-4cL" secondAttribute="trailing" constant="2" id="91I-HO-JE5"/>
                             <constraint firstAttribute="bottom" secondItem="5Ys-cu-JOH" secondAttribute="bottom" constant="20" symbolic="YES" id="9de-x7-he6"/>
                             <constraint firstItem="hKm-nF-4Mc" firstAttribute="top" secondItem="KTY-fk-lV8" secondAttribute="bottom" constant="39" id="AGv-gK-6mu"/>
                             <constraint firstItem="5Ys-cu-JOH" firstAttribute="top" secondItem="dhE-NF-GxL" secondAttribute="bottom" constant="44" id="GRA-NF-iER"/>
                             <constraint firstItem="hKm-nF-4Mc" firstAttribute="trailing" secondItem="DPI-eH-xaK" secondAttribute="trailing" id="GT8-Nq-F5A"/>
                             <constraint firstItem="DPI-eH-xaK" firstAttribute="centerX" secondItem="KTY-fk-lV8" secondAttribute="centerX" id="GwL-U8-S2g"/>
+                            <constraint firstItem="ADB-mg-4cL" firstAttribute="top" secondItem="jIZ-Sc-j0F" secondAttribute="top" constant="8" id="MJw-HB-u4O"/>
                             <constraint firstItem="KTY-fk-lV8" firstAttribute="top" secondItem="DPI-eH-xaK" secondAttribute="bottom" constant="23" id="NSZ-wM-cE3"/>
                             <constraint firstItem="hKm-nF-4Mc" firstAttribute="centerX" secondItem="dhE-NF-GxL" secondAttribute="centerX" id="Rsa-DS-Obt"/>
                             <constraint firstItem="dhE-NF-GxL" firstAttribute="leading" secondItem="jIZ-Sc-j0F" secondAttribute="leading" constant="149" id="Rxr-0H-Vvt"/>
+                            <constraint firstItem="DPI-eH-xaK" firstAttribute="top" secondItem="ADB-mg-4cL" secondAttribute="bottom" constant="8" symbolic="YES" id="V16-I8-j1w"/>
+                            <constraint firstItem="VdX-nK-dYc" firstAttribute="top" secondItem="ADB-mg-4cL" secondAttribute="top" id="WEe-cX-Lfd"/>
+                            <constraint firstItem="jIZ-Sc-j0F" firstAttribute="trailing" secondItem="VdX-nK-dYc" secondAttribute="trailing" constant="8" id="XFK-51-FbV"/>
+                            <constraint firstItem="ADB-mg-4cL" firstAttribute="width" secondItem="zTx-a5-iLn" secondAttribute="height" multiplier="89:667" id="eHH-Tu-KFe"/>
                             <constraint firstItem="5Ys-cu-JOH" firstAttribute="width" secondItem="zTx-a5-iLn" secondAttribute="width" id="fJd-iu-vjd"/>
                             <constraint firstItem="hKm-nF-4Mc" firstAttribute="leading" secondItem="DPI-eH-xaK" secondAttribute="leading" id="fbf-hG-2VE"/>
+                            <constraint firstItem="VdX-nK-dYc" firstAttribute="baseline" secondItem="ADB-mg-4cL" secondAttribute="baseline" id="mdB-zR-x9L"/>
+                            <constraint firstItem="ADB-mg-4cL" firstAttribute="leading" secondItem="jIZ-Sc-j0F" secondAttribute="leading" constant="231" id="miM-bI-isg"/>
                             <constraint firstItem="KTY-fk-lV8" firstAttribute="width" secondItem="zTx-a5-iLn" secondAttribute="width" id="naa-qO-ZGR"/>
                             <constraint firstItem="KTY-fk-lV8" firstAttribute="centerX" secondItem="jIZ-Sc-j0F" secondAttribute="centerX" id="vBI-Do-EVP"/>
                             <constraint firstItem="5Ys-cu-JOH" firstAttribute="centerX" secondItem="jIZ-Sc-j0F" secondAttribute="centerX" id="yof-2j-lMk"/>
@@ -107,9 +133,14 @@
                     <connections>
                         <outlet property="enterWordTextField" destination="DPI-eH-xaK" id="oWy-rV-Wn9"/>
                         <outlet property="enteredWordLabel" destination="KTY-fk-lV8" id="V0F-f2-NnJ"/>
+                        <outlet property="guessRemainingLabel" destination="VdX-nK-dYc" id="b80-cA-x7A"/>
                         <outlet property="guessWordTextField" destination="hKm-nF-4Mc" id="ffQ-8J-j2Q"/>
+                        <outlet property="hangmanImage" destination="5Ys-cu-JOH" id="9Qi-DX-Wgb"/>
+                        <outlet property="newGameButton" destination="dhE-NF-GxL" id="s4N-Qh-cdn"/>
+                        <outlet property="winningMessageLabel" destination="73L-Qg-ipk" id="5Ca-t6-7YS"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yha-6U-eZL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1784.8" y="1070.9145427286358"/>
         </scene>
@@ -171,6 +202,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Rtx-T6-kPF"/>
+        <segue reference="xFh-xa-oxu"/>
     </inferredMetricsTieBreakers>
 </document>

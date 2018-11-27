@@ -11,6 +11,7 @@
 		0A3C561821A49E3800217240 /* GameMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3C561721A49E3800217240 /* GameMode.swift */; };
 		0A3C561A21A49EC400217240 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3C561921A49EC400217240 /* GameModel.swift */; };
 		0A3C561C21A4A55900217240 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3C561B21A4A55900217240 /* CategoriesViewController.swift */; };
+		0ABB405021A8FC8B00DCD1CA /* GameStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABB404F21A8FC8B00DCD1CA /* GameStatus.swift */; };
 		57FCB5F421A36D3D00163B8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FCB5F321A36D3D00163B8E /* AppDelegate.swift */; };
 		57FCB5F621A36D3D00163B8E /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FCB5F521A36D3D00163B8E /* HomeController.swift */; };
 		57FCB5F921A36D3D00163B8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57FCB5F721A36D3D00163B8E /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 		0A3C561721A49E3800217240 /* GameMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMode.swift; sourceTree = "<group>"; };
 		0A3C561921A49EC400217240 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		0A3C561B21A4A55900217240 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
+		0ABB404F21A8FC8B00DCD1CA /* GameStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStatus.swift; sourceTree = "<group>"; };
 		57FCB5F021A36D3D00163B8E /* Hangman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hangman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57FCB5F321A36D3D00163B8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57FCB5F521A36D3D00163B8E /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -43,6 +45,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0ADA537B21ACF1D500DCDD86 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0A3C561921A49EC400217240 /* GameModel.swift */,
+				0ABB404F21A8FC8B00DCD1CA /* GameStatus.swift */,
+				0A3C561721A49E3800217240 /* GameMode.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0ADA537C21ACF1E000DCDD86 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				57FCB5F521A36D3D00163B8E /* HomeController.swift */,
+				0A3C561B21A4A55900217240 /* CategoriesViewController.swift */,
+				0A3C561521A49CC100217240 /* GameViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0ADA537D21ACF1FD00DCDD86 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				57FCB5F321A36D3D00163B8E /* AppDelegate.swift */,
+				57FCB5FA21A36D3E00163B8E /* Assets.xcassets */,
+				57FCB5FC21A36D3E00163B8E /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0ADA537E21ACF20800DCDD86 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				57FCB5F721A36D3D00163B8E /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		57FCB5E721A36D3D00163B8E = {
 			isa = PBXGroup;
 			children = (
@@ -62,16 +102,11 @@
 		57FCB5F221A36D3D00163B8E /* Hangman */ = {
 			isa = PBXGroup;
 			children = (
-				57FCB5F321A36D3D00163B8E /* AppDelegate.swift */,
-				57FCB5F521A36D3D00163B8E /* HomeController.swift */,
-				0A3C561921A49EC400217240 /* GameModel.swift */,
-				0A3C561721A49E3800217240 /* GameMode.swift */,
-				57FCB5F721A36D3D00163B8E /* Main.storyboard */,
-				0A3C561B21A4A55900217240 /* CategoriesViewController.swift */,
-				0A3C561521A49CC100217240 /* GameViewController.swift */,
-				57FCB5FA21A36D3E00163B8E /* Assets.xcassets */,
-				57FCB5FC21A36D3E00163B8E /* LaunchScreen.storyboard */,
 				57FCB5FF21A36D3E00163B8E /* Info.plist */,
+				0ADA537B21ACF1D500DCDD86 /* Model */,
+				0ADA537C21ACF1E000DCDD86 /* Controllers */,
+				0ADA537D21ACF1FD00DCDD86 /* Supporting Files */,
+				0ADA537E21ACF20800DCDD86 /* View */,
 			);
 			path = Hangman;
 			sourceTree = "<group>";
@@ -150,6 +185,7 @@
 				0A3C561A21A49EC400217240 /* GameModel.swift in Sources */,
 				0A3C561821A49E3800217240 /* GameMode.swift in Sources */,
 				0A3C561C21A4A55900217240 /* CategoriesViewController.swift in Sources */,
+				0ABB405021A8FC8B00DCD1CA /* GameStatus.swift in Sources */,
 				57FCB5F621A36D3D00163B8E /* HomeController.swift in Sources */,
 				0A3C561621A49CC100217240 /* GameViewController.swift in Sources */,
 				57FCB5F421A36D3D00163B8E /* AppDelegate.swift in Sources */,
